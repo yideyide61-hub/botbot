@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, types
 import uvicorn
 
 # ============ SETTINGS ============
-BOT_TOKEN = os.getenv("BOT_TOKEN")  # Telegram bot token from env
+BOT_TOKEN = os.getenv("8466271055:AAFJHcvJ3WR2oAI7g1Xky2760qLgM68WXMM")  # Telegram bot token from env
 BASE_URL = os.getenv("RENDER_EXTERNAL_URL") or os.getenv("VERCEL_URL")
 WEBHOOK_PATH = "/webhook"
 WEBHOOK_URL = f"https://{BASE_URL}{WEBHOOK_PATH}"
@@ -40,3 +40,4 @@ async def telegram_webhook(request: Request):
 # Local run (dev only)
 if __name__ == "__main__":
     uvicorn.run("bot:app", host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+
